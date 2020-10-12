@@ -55,7 +55,7 @@ const NavWrapper = styled.nav`
       z-index: 10;
 
       &::before {
-        --rotate: 2.5deg;
+        --rotate: -2.5deg;
         --scale: 1.2;
         content: '';
         position: absolute;
@@ -64,7 +64,7 @@ const NavWrapper = styled.nav`
         background-color: var(--primary);
         bottom: 0;
         left: 0;
-        transform: skew(24deg) rotate(var(--rotate)) scaleX(var(--scale));
+        transform: skew(-24deg) rotate(var(--rotate)) scaleX(var(--scale));
         transition: var(--transition);
         z-index: -10;
       }
