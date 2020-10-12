@@ -25,7 +25,7 @@ const GlobalStyles = createGlobalStyle`
     --h3: 2.369rem;
     --h4: 1.777rem;
     --h5: 1.333rem;
-    --baseText: 1rem;
+    --baseFontSize: 1rem;
     --smallText: 0.75rem;
 
     /* ELEVATION */
@@ -62,18 +62,18 @@ const GlobalStyles = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-family: "Rubik";
 
-    /* Base styles */
-    color: var(--superDarkGrey);
-    background: var(--white);
-    background-image: url(${zigzag});
-
-    background-attachment: fixed;
   }
 
   body {
   min-height: calc(100vh - 3rem);
   font-weight: 400;
   line-height: 1.65;
+
+    /* Base styles */
+    color: var(--superDarkGrey);
+    background: var(--white);
+    background-image: url(${zigzag});
+    background-attachment: fixed;
 }
 
 /* TYPOGRAPHY */
@@ -96,11 +96,18 @@ h4 {font-size: var(--h4);}
 
 h5 {font-size: var(--h5);}
 
+h6 {font-weight: normal;}
+
 small, .text_small {font-size: var(--smallText);}
 
 a {
   color: var(--superDarkGrey);
   text-decoration-color: var(--primary);
+  transition: var(--transition);
+}
+
+a:hover {
+  text-decoration-color: var(--secondary);
 }
 
 
