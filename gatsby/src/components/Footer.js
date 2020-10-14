@@ -194,7 +194,7 @@ const Footer = () => {
           </p>
         </div>
         <div>
-          <img src={logo} alt="Will Luft" width="150" />
+          <img src={logo} alt="Will Luft" width="128" />
         </div>
       </div>
     </FooterWrapper>
