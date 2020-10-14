@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const NavWrapper = styled.nav`
   margin-top: 4rem;
-  margin-bottom: 3rem;
   /* background: var(--white); */
   /* box-shadow: var(--navShadow);
   z-index: 10;
@@ -98,6 +97,12 @@ const NavWrapper = styled.nav`
   @media screen and (max-width: 40rem) {
     a {
       font-size: var(--h5);
+
+      &[aria-current='page'] {
+        &::before {
+          height: calc(var(--h5) + 4px);
+        }
+      }
     }
   }
 `;
