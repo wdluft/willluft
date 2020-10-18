@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
     --white: hsl(0, 100%, 100%);
     --teal: hsl(180, 94%, 58%);
     --orange: hsl(20, 100%, 64%);
+    --yellow: hsl(48, 100%, 52%);
     --superDarkGrey: hsl(209, 15%, 28%);
     --darkGrey: hsl(207, 12%, 43%);
     --grey: hsl(208, 12%, 58%);
@@ -16,10 +17,11 @@ const GlobalStyles = createGlobalStyle`
     --superLightGrey: hsl(208, 21%, 88%);
 
     --primary: var(--teal);
-    --secondary: var(--orange);
-    --gradient: radial-gradient(50% 50% at 50% 50%, #FF8649 35.42%, #46FBFB 100%);
+    --secondary: var(--yellow);
+    --gradient: radial-gradient(50% 50% at 50% 50%, #FFCF0A 35.42%, #46FBFB 100%);
 
     /* TYPOGRAPHY */
+    --superBigText: 5rem;
     --h1: 4.209rem;
     --h2: 3.157rem;
     --h3: 2.369rem;
