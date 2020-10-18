@@ -3,11 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const NavWrapper = styled.nav`
-  margin-top: 4rem;
-  /* background: var(--white); */
-  /* box-shadow: var(--navShadow);
-  z-index: 10;
-  border-bottom: 0.25rem solid var(--primary); */
+  padding-top: 4rem;
+  padding-bottom: 2rem;
   display: grid;
   grid-template-columns: 1fr;
 
