@@ -76,7 +76,7 @@ const NavWrapper = styled.nav`
       &::before {
         /* transform: skew(24deg) rotate(var(--rotate)) scaleX(var(--scale))
             scaleY(2.5); */
-        height: 6px;
+        height: 8px;
       }
     }
 
@@ -133,16 +133,16 @@ const Nav = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/projects">Projects</Link>
-        </li>
-        <li>
           <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/books">Books</Link>
+          <Link to="/projects">Projects</Link>
         </li>
         <li>
           <Link to="/blog">Blog</Link>
+        </li>
+        <li>
+          <Link to="/books">Books</Link>
         </li>
       </ul>
     </NavWrapper>

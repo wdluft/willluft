@@ -37,7 +37,7 @@ const FooterWrapper = styled.footer`
   }
 
   a:hover > svg > path {
-    fill: var(--secondary);
+    fill: var(--darkPrimary);
   }
 
   ul {
