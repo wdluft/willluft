@@ -3,14 +3,23 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HomePageWrapper = styled.div`
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    padding-bottom: 2rem;
+  }
+
   h1 {
     font-size: var(--h4);
     padding-bottom: 1rem;
 
     span {
       font-size: var(--h2);
+      margin-top: 1rem;
       position: relative;
       z-index: 10;
+      display: inline-block;
 
       &::before {
         --rotate: 2.5deg;
@@ -31,11 +40,31 @@ const HomePageWrapper = styled.div`
 
   img {
     border-radius: 50%;
+    justify-self: center;
   }
 
   p {
     font-size: var(--h5);
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  @media screen and (min-width: 40rem) {
+    .intro {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+
+  @media screen and (min-width: 53rem) {
+    h1 {
+      span {
+        font-size: var(--superBigText);
+
+        &::before {
+          height: calc(var(--superBigText) + 16px);
+        }
+      }
+    }
   }
 `;
 
@@ -54,14 +83,18 @@ const Index = () => {
 
   return (
     <HomePageWrapper>
-      <h1>
-        Hi, I'm &nbsp; <span> Will Luft.</span>
-      </h1>
-      <img
-        src={data.headshot.childImageSharp.resize.src}
-        width="175"
-        alt="Will Luft"
-      />
+      <div className="intro">
+        <h1>
+          Hi, I'm &nbsp;
+          <br />
+          <span> Will Luft.</span>
+        </h1>
+        <img
+          src={data.headshot.childImageSharp.resize.src}
+          width="175"
+          alt="Will Luft"
+        />
+      </div>
       <p>
         By day I help support public schools and teachers, doing customer
         support for <a href="https://www.donorschoose.org/">DonorsChoose</a>.
