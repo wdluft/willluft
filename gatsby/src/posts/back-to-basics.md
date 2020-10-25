@@ -3,6 +3,7 @@ slug: '/back-to-basics-beginner-javascript'
 title: "Back to Basics with Wes Bos's Beginner JavaScript Course"
 date: '2020-03-26'
 blurb: "Review of Wes Bos's Beginner JavaScript course and what I learned from it."
+type: 'blog post'
 ---
 
 I've been learning web development for a couple years at this point, but I still feel like I have a lot to learn. It's a skill I try to build every day and I've gone through a bunch of different tutorials and courses. I can confidently say that <a href='https://beginnerjavascript.com/' rel="noopener noreferrer" target='_blank'>Wes Bos's Beginner JavaScript course</a> is one of the best I've done.

@@ -3,6 +3,7 @@ slug: '/become-by-doing'
 title: 'Become By Doing'
 date: '2020-03-15'
 blurb: 'What does it mean to me and why is it the title of the blog.'
+type: 'blog post'
 ---
 
 "Become by doing" has become the primary expression for myself to try and live by. For the past few years, I've been on the hunt for a simple phrase or expression to live by. I've tried a bunch of different ones, none really stuck with me. I'll reference them occasionally when doing some thinking about how I can be a better person, but I don't think of them every day. I don't remember the exact date I came up with this new expression, but I think it's been a couple months already.

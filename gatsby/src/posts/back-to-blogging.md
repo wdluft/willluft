@@ -3,6 +3,7 @@ slug: '/back-to-blogging'
 title: 'Back to Blogging'
 date: '2020-03-08'
 blurb: 'Why and how I built this blog.'
+type: 'blog post'
 ---
 
 I used to write a lot more than I do now. I'd write about the books I read, how my day went, and other thoughts and ideas that caught my mind. I've lost count of the number of blogs I've had across the years, moving from Blogspot/Blogger from Google to Wordpress. Writing a great way to solidify your thoughts and help you work through problems. And it's something I want to do more.

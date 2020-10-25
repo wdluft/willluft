@@ -3,6 +3,7 @@ slug: '/what-i-learned-about-box-shadows'
 title: 'What I Learned About Box Shadows'
 date: '2020-04-05'
 blurb: 'How learning about box shadows elevated my design thinking.'
+type: 'blog post'
 ---
 
 Making box shadows look good has baffled me since I started learning about web development. Whenever I would style a project, I defaulted to having it all flat, because I didn't understand how the box-shadow CSS property worked. Even once I learned the basics of it, I couldn't figure out how to make them look good. Since I was redesigning my personal portfolio site (<a href='https://willluft.com' rel="noopener noreferrer" target='_blank'>WillLuft.com</a>), I really wanted to figure out how to add them in to make it look like it had different levels. To do that, I started by diving deep into learning all the effects.

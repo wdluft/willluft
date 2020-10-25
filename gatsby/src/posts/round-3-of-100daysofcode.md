@@ -3,6 +3,7 @@ slug: '/round-3-of-100daysofcode'
 title: 'Round 3 of #100DaysOfCode'
 date: '2020-05-13'
 blurb: 'I finished up my third round of the #100DaysOfCode challenge on May 6, 2020. Here is how I spent my time and what I learned.'
+type: 'blog post'
 ---
 
 Last week wrapped up the third time I've completed the #100DaysOfCode challenge. For those not familiar, it is a challenge to spend at least 30 minutes to an hour a day coding for 100 days. Ideally the days are all in a row, but sometimes life gets in the way. I like to start my year off with this challenge to make sure I'm putting in the time consistently to practice and learn. As always, there was a lot of focus on learning new things.
