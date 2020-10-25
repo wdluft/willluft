@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import 'typeface-rubik';
+import 'fontsource-fira-mono';
 import zigzag from '../assets/images/zig-zag.svg';
 
 const GlobalStyles = createGlobalStyle`
@@ -8,6 +9,9 @@ const GlobalStyles = createGlobalStyle`
     --black: hsl(0, 0%, 0%);
     --white: hsl(0, 100%, 100%);
     --teal: hsl(180, 94%, 58%);
+    --darkTeal: hsl(182, 92%, 43%);
+    --superDarkTeal: hsl(185, 85%, 28%);
+    --superLightTeal: hsl(180, 100%, 88%);
     --orange: hsl(20, 100%, 64%);
     --yellow: hsl(48, 100%, 52%);
     --superDarkGrey: hsl(209, 15%, 28%);
@@ -17,8 +21,13 @@ const GlobalStyles = createGlobalStyle`
     --superLightGrey: hsl(208, 21%, 88%);
 
     --primary: var(--teal);
+    --darkPrimary: var(--darkTeal);
+    --superDarkPrimary: var(--superDarkTeal);
+    --superLightPrimary: var(--superLightTeal);
     --secondary: var(--yellow);
     --gradient: radial-gradient(50% 50% at 50% 50%, #FFCF0A 35.42%, #46FBFB 100%);
+    --linearGradient: linear-gradient(to top right, #46FBFB 0%, #C2FFFF 49%, #FFFFFF 50%, #FFF3C2 51%, #FFCF0A 100%);
+    --verticalGradient: linear-gradient(to top, #46FBFB 0%, #C2FFFF 49%, #FFFFFF 50%, #FFF3C2 51%, #FFCF0A 100%);
 
     /* TYPOGRAPHY */
     --superBigText: 5rem;
@@ -29,20 +38,22 @@ const GlobalStyles = createGlobalStyle`
     --h5: 1.333rem;
     --baseFontSize: 1rem;
     --smallText: 0.75rem;
+    --bodyFont: "Rubik";
+    --monoFont: "Fira Mono";
 
     /* ELEVATION */
-    --xsShadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
-    --smShadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --baseShadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    --mdShadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --lgShadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --xlShadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    --xxlShadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    --innerShadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
-    --navShadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+    --xsShadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    --smShadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    --baseShadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+    --mdShadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15), 0 2px 4px -1px rgba(0, 0, 0, 0.11);
+    --lgShadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    --xlShadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.09);
+    --xxlShadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+    --innerShadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.11);
+    --navShadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.15), 0 -2px 4px -1px rgba(0, 0, 0, 0.11);
 
 
-    --transition: all 200ms ease-in;
+    --transition: all 250ms;
   }
 
   *, *::before, *::after {
@@ -61,9 +72,7 @@ const GlobalStyles = createGlobalStyle`
     border: var(--borderSize) var(--superDarkGrey) solid;
 
     /* Typography */
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-family: "Rubik";
-
+    font-family: var(--bodyFont), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
   body {
@@ -109,7 +118,7 @@ a {
 }
 
 a:hover {
-  text-decoration-color: var(--secondary);
+  text-decoration-color: var(--darkPrimary);
 }
 
 
@@ -126,13 +135,25 @@ a:hover {
   }
   body::-webkit-scrollbar-thumb {
     background-color: var(--teal);
-    background-image: var(--gradient);
+    background-image: var(--verticalGradient);
     border-radius: 6px;
     border: 3px solid var(--superDarkGrey);
   }
 
   img {
     max-width: 100%;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
+  .primary {
+    color: var(--primary);
   }
 `;
 
