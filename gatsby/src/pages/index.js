@@ -43,11 +43,6 @@ const HomePageWrapper = styled.div`
     justify-self: center;
   }
 
-  p {
-    font-size: var(--h5);
-    padding-bottom: 2rem;
-  }
-
   @media screen and (min-width: 40rem) {
     .intro {
       grid-template-columns: 1fr 1fr;
