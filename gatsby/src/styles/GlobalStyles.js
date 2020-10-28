@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
     --teal: hsl(180, 94%, 58%);
     --darkTeal: hsl(182, 92%, 43%);
     --superDarkTeal: hsl(185, 85%, 28%);
+    --lightTeal: hsl(180, 98%, 76%);
     --superLightTeal: hsl(180, 100%, 88%);
     --orange: hsl(20, 100%, 64%);
     --yellow: hsl(48, 100%, 52%);
@@ -23,6 +24,7 @@ const GlobalStyles = createGlobalStyle`
     --primary: var(--teal);
     --darkPrimary: var(--darkTeal);
     --superDarkPrimary: var(--superDarkTeal);
+    --lightPrimary: var(--lightTeal);
     --superLightPrimary: var(--superLightTeal);
     --secondary: var(--yellow);
     --gradient: radial-gradient(50% 50% at 50% 50%, #FFCF0A 35.42%, #46FBFB 100%);
@@ -67,6 +69,8 @@ const GlobalStyles = createGlobalStyle`
       --size: 3rem;
     }
 
+    scroll-behavior: smooth;
+
     /* Full page border */
     --borderSize: calc(var(--size) / 2);
     border: var(--borderSize) var(--superDarkGrey) solid;
@@ -85,6 +89,8 @@ const GlobalStyles = createGlobalStyle`
     background: var(--white);
     background-image: url(${zigzag});
     background-attachment: fixed;
+
+    
 }
 
 /* TYPOGRAPHY */
@@ -107,7 +113,21 @@ h4 {font-size: var(--h4);}
 
 h5 {font-size: var(--h5);}
 
-h6 {font-weight: normal;}
+h6 {font-weight: normal;
+  @media screen and (min-width: 40rem) {
+    font-size: var(--baseFontSize);
+  }
+}
+
+p {
+  padding-bottom: 1rem;
+  
+  
+  @media screen and (min-width: 40rem) {
+    padding-bottom: 2rem;
+    font-size: var(--h5);
+  }
+}
 
 small, .text_small {font-size: var(--smallText);}
 
@@ -115,6 +135,7 @@ a {
   color: var(--superDarkGrey);
   text-decoration-color: var(--primary);
   transition: var(--transition);
+  font-size: inherit;
 }
 
 a:hover {
@@ -135,13 +156,14 @@ a:hover {
   }
   body::-webkit-scrollbar-thumb {
     background-color: var(--teal);
-    background-image: var(--verticalGradient);
+    background-image: var(--teal);
     border-radius: 6px;
     border: 3px solid var(--superDarkGrey);
   }
 
   img {
     max-width: 100%;
+    
   }
 
   .bold {
@@ -154,6 +176,18 @@ a:hover {
 
   .primary {
     color: var(--primary);
+  }
+
+  button, .btn {
+    padding: 1rem 2rem;
+    background: var(--primary);
+    font-weight: bold;
+    transition: var(--transition);
+    text-decoration-color: var(--superDarkGrey);
+
+    &:hover {
+      background: var(--lightPrimary);
+    }
   }
 `;
 
