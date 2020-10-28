@@ -5,23 +5,27 @@ import styled from 'styled-components';
 const BlogWrapper = styled.div`
   overflow-wrap: break-word;
 
-  .post {
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-    position: relative;
+  h1 {
+    padding-bottom: 1rem;
+    font-size: var(--h2);
 
-    &::before {
-      position: absolute;
-      content: '';
-      width: 4px;
-      height: calc(100% - 2rem);
-      left: 0;
-      top: 0;
-      background-color: var(--primary);
+    @media screen and (min-width: 40rem) {
+      font-size: var(--h1);
     }
   }
 
+  .post {
+    background: var(--superDarkGrey);
+    color: var(--superLightGrey);
+    border: 4px solid var(--primary);
+    box-shadow: var(--mdShadow);
+    padding: 1rem 1rem 0;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
   a {
+    color: var(--superLightGrey);
     text-decoration: none;
 
     &:hover {
@@ -70,6 +74,7 @@ const Blog = () => {
 
   return (
     <BlogWrapper>
+      <h1>Blog Posts</h1>
       {posts.map((post) => (
         <div key={post.node.frontmatter.slug} className="post">
           <h2>
