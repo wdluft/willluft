@@ -62,6 +62,7 @@ const FooterWrapper = styled.footer`
 
   p {
     font-size: var(--h5);
+    padding-bottom: 0;
   }
 
   .copyright {
