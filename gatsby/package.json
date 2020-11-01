@@ -9,10 +9,8 @@
     "build": "cross-env NODE_OPTIONS=\"-r esm\" gatsby build",
     "develop": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "netlify": "netlify dev",
-    "prebuild": "netlify-lambda install"
+    "serve": "cross-env NODE_OPTIONS=\"-r esm\" gatsby serve",
+    "clean": "gatsby clean"
   },
   "eslintConfig": {
     "extends": [
@@ -26,7 +24,7 @@
     "babel-plugin-styled-components": "^1.11.1",
     "dotenv": "^8.2.0",
     "fontsource-fira-mono": "^3.0.9",
-    "gatsby": "^2.24.63",
+    "gatsby": "^2.24.91",
     "gatsby-image": "^2.4.17",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sharp": "^2.6.38",
@@ -34,18 +32,18 @@
     "gatsby-remark-prismjs": "^3.5.16",
     "gatsby-source-filesystem": "^2.3.32",
     "gatsby-source-sanity": "^6.0.4",
-    "gatsby-transformer-remark": "^2.8.46",
+    "gatsby-transformer-remark": "^2.8.47",
     "gatsby-transformer-sharp": "^2.5.16",
     "isomorphic-fetch": "^2.2.1",
     "netlify-cli": "^2.62.0",
     "netlify-lambda": "^2.0.1",
     "normalize.css": "^8.0.1",
     "prismjs": "^1.22.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "styled-components": "^5.2.0",
-    "typeface-rubik": "0.0.72"
+    "typeface-rubik": "^1.1.13"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -53,7 +51,7 @@
     "eslint": "^7.8.1",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-config-wesbos": "1.0.0",
+    "eslint-config-wesbos": "^1.0.1",
     "eslint-plugin-html": "^6.1.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
@@ -65,6 +63,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wesbos/slicks-slices"
+    "url": "https://github.com/wdluft/willluft"
   }
 }
