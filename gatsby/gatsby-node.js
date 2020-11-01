@@ -1,9 +1,7 @@
 import path, { resolve } from 'path';
-import fetch from 'isomorphic-fetch';
 
 async function turnPostsIntoPages({ graphql, actions }) {
   // get template for this page
-  const postTemplate = path.resolve('./src/templates/Posts.js');
   // query all posts
   const { data } = await graphql(`
     query {
@@ -33,8 +31,37 @@ async function turnPostsIntoPages({ graphql, actions }) {
   });
 }
 
+async function turnBookListsIntoPages({ graphql, actions }) {
+  const { data } = await graphql(`
+    query {
+      allMarkdownRemark(filter: { frontmatter: { type: { eq: "books" } } }) {
+        edges {
+          node {
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  data.allMarkdownRemark.edges.forEach(({ node }) => {
+    actions.createPage({
+      path: `/booklists/${node.frontmatter.slug}`,
+      component: path.resolve('./src/templates/BookList.js'),
+      context: {
+        slug: node.frontmatter.slug,
+      },
+    });
+  });
+}
+
 export async function createPages(params) {
   // Create pages dynamically
   // wait for all promises to be resolved before finishing this function
-  await Promise.all([turnPostsIntoPages(params)]);
+  await Promise.all([
+    turnPostsIntoPages(params),
+    turnBookListsIntoPages(params),
+  ]);
 }
