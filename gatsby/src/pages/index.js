@@ -41,6 +41,7 @@ const HomePageWrapper = styled.div`
   img {
     border-radius: 50%;
     justify-self: center;
+    border: 4px solid var(--primary);
   }
 
   @media screen and (min-width: 40rem) {
