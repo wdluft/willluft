@@ -142,7 +142,7 @@ const Nav = () => {
           <Link to="/blog">Blog</Link>
         </li>
         <li>
-          <Link to="/books">Books</Link>
+          <Link to="/booklists">Book Lists</Link>
         </li>
       </ul>
     </NavWrapper>
