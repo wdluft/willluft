@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import 'normalize.css';
 import GlobalStyles from '../styles/GlobalStyles';
@@ -7,14 +7,14 @@ import Footer from './Footer';
 import battlestation from '../assets/images/battlestation.jpg';
 
 const LayoutWrapper = styled.div`
+  &.welcome {
+    background: url(${battlestation}) no-repeat top center;
+  }
+
   main {
     max-width: 48rem;
     margin: 0 auto;
     padding: 2rem 2rem;
-  }
-
-  &.welcome {
-    background: url(${battlestation}) no-repeat top center;
   }
 
   @media screen and (min-width: 55rem) {
@@ -24,15 +24,25 @@ const LayoutWrapper = styled.div`
   }
 `;
 
-const Layout = ({ children, location }) => (
-  <>
-    <GlobalStyles />
-    <LayoutWrapper className={location.pathname === '/' ? 'welcome' : null}>
-      <Nav />
-      <main>{children}</main>
-      <Footer />
-    </LayoutWrapper>
-  </>
-);
+const Layout = ({ children, location }) => {
+  const [hasMounted, setHasMounted] = useState(false);
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+  if (!hasMounted) {
+    return null;
+  }
+
+  return (
+    <>
+      <GlobalStyles />
+      <LayoutWrapper className={location.pathname !== '/' ? null : 'welcome'}>
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+      </LayoutWrapper>
+    </>
+  );
+};
 
 export default Layout;
