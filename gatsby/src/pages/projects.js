@@ -26,11 +26,11 @@ const ProjectsWrapper = styled.div`
     gap: 1rem;
     display: flex;
     flex-direction: column;
-    width: 352px;
+    max-width: 352px;
     margin-bottom: 2rem;
 
     @media screen and (min-width: 40rem) {
-      width: 100%;
+      max-width: 100%;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-columns: 1fr 1fr;
