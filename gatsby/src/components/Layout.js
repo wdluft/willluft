@@ -37,7 +37,10 @@ const Layout = ({ children, location }) => (
 
   <>
     <GlobalStyles />
-    <LayoutWrapper className={location.pathname === '/' ? 'welcome' : null}>
+    <LayoutWrapper
+      id="layoutDiv"
+      className={location.pathname === '/' ? 'welcome' : null}
+    >
       <Nav />
       <main>{children}</main>
       <Footer />
