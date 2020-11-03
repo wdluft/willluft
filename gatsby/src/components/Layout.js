@@ -7,6 +7,8 @@ import Footer from './Footer';
 import battlestation from '../assets/images/battlestation.jpg';
 
 const LayoutWrapper = styled.div`
+  min-height: calc(100vh - 3rem);
+
   &.welcome {
     background: url(${battlestation}) no-repeat top center;
   }
@@ -24,25 +26,22 @@ const LayoutWrapper = styled.div`
   }
 `;
 
-const Layout = ({ children, location }) => {
-  const [hasMounted, setHasMounted] = useState(false);
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
-  if (!hasMounted) {
-    return null;
-  }
+const Layout = ({ children, location }) => (
+  // const [hasMounted, setHasMounted] = useState(false);
+  // useEffect(() => {
+  //   setHasMounted(true);
+  // }, []);
+  // if (!hasMounted) {
+  //   return null;
+  // }
 
-  return (
-    <>
-      <GlobalStyles />
-      <LayoutWrapper className={location.pathname !== '/' ? null : 'welcome'}>
-        <Nav />
-        <main>{children}</main>
-        <Footer />
-      </LayoutWrapper>
-    </>
-  );
-};
-
+  <>
+    <GlobalStyles />
+    <LayoutWrapper className={location.pathname === '/' ? 'welcome' : null}>
+      <Nav />
+      <main>{children}</main>
+      <Footer />
+    </LayoutWrapper>
+  </>
+);
 export default Layout;
