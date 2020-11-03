@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
+import SEO from '../components/SEO';
 
 const BlogWrapper = styled.div`
   overflow-wrap: break-word;
@@ -73,20 +74,23 @@ const Blog = () => {
   const posts = data.posts.edges;
 
   return (
-    <BlogWrapper>
-      <h1>Blog Posts</h1>
-      {posts.map((post) => (
-        <div key={post.node.frontmatter.slug} className="post">
-          <h2>
-            <Link to={`${post.node.frontmatter.slug}`}>
-              {post.node.frontmatter.title}
-            </Link>
-          </h2>
-          <h6>{post.node.frontmatter.date}</h6>
-          <p>{post.node.frontmatter.blurb}</p>
-        </div>
-      ))}
-    </BlogWrapper>
+    <>
+      <SEO title="Blog" />
+      <BlogWrapper>
+        <h1>Blog Posts</h1>
+        {posts.map((post) => (
+          <div key={post.node.frontmatter.slug} className="post">
+            <h2>
+              <Link to={`${post.node.frontmatter.slug}`}>
+                {post.node.frontmatter.title}
+              </Link>
+            </h2>
+            <h6>{post.node.frontmatter.date}</h6>
+            <p>{post.node.frontmatter.blurb}</p>
+          </div>
+        ))}
+      </BlogWrapper>
+    </>
   );
 };
 

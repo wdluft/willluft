@@ -1,6 +1,7 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
+import SEO from '../components/SEO';
 
 const HomePageWrapper = styled.div`
   .intro {
@@ -78,35 +79,39 @@ const Index = () => {
   `);
 
   return (
-    <HomePageWrapper>
-      <div className="intro">
-        <h1>
-          Hi, I'm &nbsp;
-          <br />
-          <span> Will Luft.</span>
-        </h1>
-        <img
-          src={data.headshot.childImageSharp.resize.src}
-          width="175"
-          alt="Will Luft"
-        />
-      </div>
-      <p>
-        By day I help support public schools and teachers, doing customer
-        support for <a href="https://www.donorschoose.org/">DonorsChoose</a>.
-      </p>
-      <p>
-        By night I keep busy by <Link to="/projects">building websites</Link>,
-        finding projects to keep my hands busy, and trying to stay in shape to
-        play soccer and volleyball.
-      </p>
+    <>
+      <SEO title="Home" />
+      <HomePageWrapper>
+        <div className="intro">
+          <h1>
+            Hi, I'm &nbsp;
+            <br />
+            <span> Will Luft.</span>
+          </h1>
+          <img
+            src={data.headshot.childImageSharp.resize.src}
+            width="175"
+            alt="Will Luft"
+          />
+        </div>
+        <p>
+          By day I help support public schools and teachers, doing customer
+          support for <a href="https://www.donorschoose.org/">DonorsChoose</a>.
+        </p>
+        <p>
+          By night I keep busy by <Link to="/projects">building websites</Link>,
+          finding projects to keep my hands busy, and trying to stay in shape to
+          play soccer and volleyball.
+        </p>
 
-      <p>
-        You can <Link to="/about">read more about me here,</Link> but have a
-        look around to see <Link to="/books">what I've been reading,</Link> and{' '}
-        <Link to="/blog">what's on my mind.</Link>
-      </p>
-    </HomePageWrapper>
+        <p>
+          You can <Link to="/about">read more about me here,</Link> but have a
+          look around to see{' '}
+          <Link to="/booklists">what I've been reading, </Link>
+          and <Link to="/blog">what's on my mind.</Link>
+        </p>
+      </HomePageWrapper>
+    </>
   );
 };
 

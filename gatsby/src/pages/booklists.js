@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
+import SEO from '../components/SEO';
 
 const BooksWrapper = styled.div`
   overflow-wrap: break-word;
@@ -86,28 +87,31 @@ const BookLists = () => {
   const rereadList = data.rereadList.edges[0].node.frontmatter;
 
   return (
-    <BooksWrapper>
-      <h1>Book Lists</h1>
-      <p>
-        I try to read every day. Starting in 2019, I've kept a list of
-        everything I've read during the year. You can find the lists for the
-        years since below. There are also some{' '}
-        <Link to={rereadList.slug}>books that I reread</Link> every year. These
-        books are either works of fiction, with stories and characters that I
-        love, or books full of things I want to learn and embody.
-      </p>
+    <>
+      <SEO title="Book Lists" />
+      <BooksWrapper>
+        <h1>Book Lists</h1>
+        <p>
+          I try to read every day. Starting in 2019, I've kept a list of
+          everything I've read during the year. You can find the lists for the
+          years since below. There are also some{' '}
+          <Link to={rereadList.slug}>books that I reread</Link> every year.
+          These books are either works of fiction, with stories and characters
+          that I love, or books full of things I want to learn and embody.
+        </p>
 
-      {books.map((book) => (
-        <div key={book.node.frontmatter.slug} className="book">
-          <h2>
-            <Link to={`${book.node.frontmatter.slug}`}>
-              {book.node.frontmatter.title}
-            </Link>
-          </h2>
-          <h6>{book.node.frontmatter.date}</h6>
-        </div>
-      ))}
-    </BooksWrapper>
+        {books.map((book) => (
+          <div key={book.node.frontmatter.slug} className="book">
+            <h2>
+              <Link to={`${book.node.frontmatter.slug}`}>
+                {book.node.frontmatter.title}
+              </Link>
+            </h2>
+            <h6>{book.node.frontmatter.date}</h6>
+          </div>
+        ))}
+      </BooksWrapper>
+    </>
   );
 };
 
