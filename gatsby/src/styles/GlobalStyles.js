@@ -189,6 +189,18 @@ a:hover {
       background: var(--lightPrimary);
     }
   }
+
+  main {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+  }
+
+  @media screen and (min-width: 55rem) {
+    main {
+      padding: 2rem 0;
+    }
+  }
 `;
 
 export default GlobalStyles;
