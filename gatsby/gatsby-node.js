@@ -1,4 +1,4 @@
-import path, { resolve } from 'path';
+import path from 'path';
 
 async function turnPostsIntoPages({ graphql, actions }) {
   // get template for this page
