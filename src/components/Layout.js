@@ -15,13 +15,14 @@ const LayoutWrapper = styled.div`
 `;
 
 function Layout({ children, location, pageContext, path, className }) {
-  const [hasMounted, setHasMounted] = useState(false);
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
-  if (!hasMounted) {
-    return null;
-  }
+  // const [hasMounted, setHasMounted] = useState(false);
+  // useEffect(() => {
+  //   setHasMounted(true);
+  // }, []);
+  // if (!hasMounted) {
+  //   return null;
+  // }
+  console.log(test);
 
   return (
     <>
