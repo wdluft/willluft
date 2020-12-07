@@ -22,7 +22,7 @@ function Layout({ children, location, pageContext, path, className }) {
   // if (!hasMounted) {
   //   return null;
   // }
-  console.log(test);
+  console.log('test');
 
   return (
     <>
