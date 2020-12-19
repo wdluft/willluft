@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import 'typeface-rubik';
+import 'fontsource-rubik';
 import 'fontsource-fira-mono';
 import zigzag from '../assets/images/zig-zag.svg';
 

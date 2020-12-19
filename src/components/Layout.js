@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import 'normalize.css';
 import GlobalStyles from '../styles/GlobalStyles';
@@ -14,14 +14,7 @@ const LayoutWrapper = styled.div`
   }
 `;
 
-function Layout({ children, location, pageContext, path, className }) {
-  // const [hasMounted, setHasMounted] = useState(false);
-  // useEffect(() => {
-  //   setHasMounted(true);
-  // }, []);
-  // if (!hasMounted) {
-  //   return null;
-  // }
+function Layout({ children, location }) {
   console.log('test');
 
   return (

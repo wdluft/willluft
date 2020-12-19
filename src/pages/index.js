@@ -107,7 +107,7 @@ const Index = () => {
         <p>
           You can <Link to="/about">read more about me here,</Link> but have a
           look around to see{' '}
-          <Link to="/booklists">what I've been reading, </Link>
+          <Link to="/bookshelf">what I've been reading, </Link>
           and <Link to="/blog">what's on my mind.</Link>
         </p>
       </HomePageWrapper>

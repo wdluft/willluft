@@ -50,7 +50,7 @@ const BooksWrapper = styled.div`
   }
 `;
 
-const BookLists = () => {
+const Bookshelf = () => {
   const data = useStaticQuery(graphql`
     query {
       books: allMarkdownRemark(
@@ -90,7 +90,7 @@ const BookLists = () => {
     <>
       <SEO title="Book Lists" />
       <BooksWrapper>
-        <h1>Book Lists</h1>
+        <h1>Bookshelf</h1>
         <p>
           I try to read every day. Starting in 2019, I've kept a list of
           everything I've read during the year. You can find the lists for the
@@ -115,4 +115,4 @@ const BookLists = () => {
   );
 };
 
-export default BookLists;
+export default Bookshelf;

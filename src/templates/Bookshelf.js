@@ -26,9 +26,9 @@ const BookListWrapper = styled.div`
   }
 `;
 
-const BookList = ({ data, location }) => {
+const BookList = ({ data }) => {
   const { markdownRemark, site } = data;
-  const pageURL = `${site.siteMetadata.siteUrl}/booklists/${markdownRemark.frontmatter.slug}`;
+  const pageURL = `${site.siteMetadata.siteUrl}/bookshelf/${markdownRemark.frontmatter.slug}`;
   return (
     <>
       <SEO title={markdownRemark.frontmatter.title} />
