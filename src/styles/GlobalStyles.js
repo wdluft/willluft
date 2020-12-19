@@ -13,7 +13,6 @@ const GlobalStyles = createGlobalStyle`
     --superDarkTeal: hsl(185, 85%, 28%);
     --lightTeal: hsl(180, 98%, 76%);
     --superLightTeal: hsl(180, 100%, 88%);
-    --orange: hsl(20, 100%, 64%);
     --yellow: hsl(48, 100%, 52%);
     --superDarkGrey: hsl(209, 15%, 28%);
     --darkGrey: hsl(207, 12%, 43%);
