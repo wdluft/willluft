@@ -48,8 +48,8 @@ async function turnBookListsIntoPages({ graphql, actions }) {
 
   data.allMarkdownRemark.edges.forEach(({ node }) => {
     actions.createPage({
-      path: `/booklists/${node.frontmatter.slug}`,
-      component: path.resolve('./src/templates/BookList.js'),
+      path: `/bookshelf/${node.frontmatter.slug}`,
+      component: path.resolve('./src/templates/Bookshelf.js'),
       context: {
         slug: node.frontmatter.slug,
       },

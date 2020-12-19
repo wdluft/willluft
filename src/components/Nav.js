@@ -12,7 +12,7 @@ const NavWrapper = styled.nav`
   .logo {
     display: flex;
     justify-content: center;
-    margin-bottom: -32px;
+    margin-bottom: -48px;
     z-index: 10;
 
     a {
@@ -122,7 +122,7 @@ const Nav = () => {
       <h1 className="logo">
         <Link to="/">
           <img
-            width="128"
+            width="144"
             src={data.logo.childImageSharp.resize.src}
             alt="Will Luft"
           />
@@ -142,7 +142,7 @@ const Nav = () => {
           <Link to="/blog">Blog</Link>
         </li>
         <li>
-          <Link to="/booklists">Book Lists</Link>
+          <Link to="/bookshelf">Bookshelf</Link>
         </li>
       </ul>
     </NavWrapper>

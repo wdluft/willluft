@@ -1,7 +1,7 @@
 ---
 slug: 'reading-list-2020'
 title: 'Reading List 2020'
-date: '2020-11-02'
+date: '2020-12-19'
 type: 'books'
 ---
 
@@ -42,3 +42,7 @@ type: 'books'
 - [_White Fragility_](https://smile.amazon.com/White-Fragility-People-About-Racism/dp/0807047414/ref=sr_1_3?crid=3J06ZKMC8JCHX&dchild=1&keywords=white+fragility&qid=1604246686&s=books&sprefix=white+fra%2Cstripbooks%2C179&sr=1-3 'White Fragility') - Robin Diangelo
 - [_"What Do You Care What Other People Think?"_](https://smile.amazon.com/What-Care-Other-People-Think/dp/0393355640/ref=sr_1_2?crid=1ODBBTESQ53G4&dchild=1&keywords=surely+you%27re+joking+mr.+feynman&qid=1604246626&s=books&sprefix=surely%2Cstripbooks%2C182&sr=1-2 'What Do You Care What Other People Think?') - Richard P. Feynman
 - [_The City of Brass_](https://smile.amazon.com/The-City-of-Brass-S-A-Chakraborty-audiobook/dp/B075KWZZWR/ref=sr_1_1?dchild=1&keywords=the+city+of+brass&qid=1604246754&s=books&sr=1-1 'The City of Brass') - S. A. Chakraborty
+- [_Range: Why Generalists Triumph in a Specialized World_](https://smile.amazon.com/Range-Generalists-Triumph-Specialized-World/dp/0735214484/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1608384661&sr=8-3 'Range: Why Generalists Triumph in a Specialized World') - David Epstein
+- [_The Wakling Drum_](https://smile.amazon.com/Walking-Drum-Louis-LAmours-Treasures/dp/1984817884/ref=sr_1_1?dchild=1&keywords=the+walking+drum&qid=1608384719&sr=8-1 'The Walking Drum') - Louis L'Amour
+- [_From Bacteria to Bach and Back: The Evolution of Minds_](https://smile.amazon.com/Bacteria-Bach-Back-Evolution-Minds/dp/0393355500/ref=sr_1_1?crid=32NPXVB5MS2DT&dchild=1&keywords=from+bacteria+to+bach+and+back&qid=1608384769&sprefix=from+bacte%2Caps%2C169&sr=8-1 'From Bacteria to Bach and Back: The Evolution of Minds') - Daniel Dennett
+- [_The Haunted Mesa_](https://smile.amazon.com/Haunted-Mesa-Louis-LAmours-Treasures/dp/1984817876/ref=sr_1_1?dchild=1&keywords=the+haunted+mesa&qid=1608384809&sr=8-1 'The Haunted Mesa') - Louis L'Amour
