@@ -15,8 +15,6 @@ const LayoutWrapper = styled.div`
 `;
 
 function Layout({ children, location }) {
-  console.log('test');
-
   return (
     <>
       <GlobalStyles />
