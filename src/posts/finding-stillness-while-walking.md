@@ -16,7 +16,7 @@ For the past couple of weeks, my days are almost always better when I get up ear
 The most challenging part of the meditation practices I tried were the releasing of thoughts or the goal of not letting thoughts capture your focus. I'd catch myself thinking, and then mentally scold myself for it, which is another thought itself. Walking instead becomes a time either specifically for thinking and working things out in my head or just to experience some stillness in my life. I don't have to worry about any texts or emails or any work, I can just appreciate what is right in front of me.
 </p>
 <p>
-In his book, _Stillness is the Key_, Ryan Holiday has an entire chapter dedicated to walking. He says "It's not about anything...Walk away from the thoughts that need to be walked away from; walk toward the ones that have now appeared". Walks can be used to try and work out a problem, or to let go of whatever is occupying your mind and letting new things in.
+In his book, <em>Stillness is the Key</em>, Ryan Holiday has an entire chapter dedicated to walking. He says "It's not about anything...Walk away from the thoughts that need to be walked away from; walk toward the ones that have now appeared". Walks can be used to try and work out a problem, or to let go of whatever is occupying your mind and letting new things in.
 </p>
 <p>
 Taking a walk is growing to be one of my most enjoyable and helpful parts of my days. Whether it is in the morning before I start my work or if it is when I'm feeling very stressed and heightened emotions, getting up for a walk does wonders for my mental health.
