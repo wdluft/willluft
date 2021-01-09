@@ -1,7 +1,7 @@
 ---
 slug: 'reading-list-2020'
 title: 'Reading List 2020'
-date: '2020-12-19'
+date: '2020-12-31'
 type: 'books'
 ---
 
@@ -46,3 +46,4 @@ type: 'books'
 - [_The Wakling Drum_](https://smile.amazon.com/Walking-Drum-Louis-LAmours-Treasures/dp/1984817884/ref=sr_1_1?dchild=1&keywords=the+walking+drum&qid=1608384719&sr=8-1 'The Walking Drum') - Louis L'Amour
 - [_From Bacteria to Bach and Back: The Evolution of Minds_](https://smile.amazon.com/Bacteria-Bach-Back-Evolution-Minds/dp/0393355500/ref=sr_1_1?crid=32NPXVB5MS2DT&dchild=1&keywords=from+bacteria+to+bach+and+back&qid=1608384769&sprefix=from+bacte%2Caps%2C169&sr=8-1 'From Bacteria to Bach and Back: The Evolution of Minds') - Daniel Dennett
 - [_The Haunted Mesa_](https://smile.amazon.com/Haunted-Mesa-Louis-LAmours-Treasures/dp/1984817876/ref=sr_1_1?dchild=1&keywords=the+haunted+mesa&qid=1608384809&sr=8-1 'The Haunted Mesa') - Louis L'Amour
+- [_Mobey Dick_](https://smile.amazon.com/Moby-Wordsworth-Classics-Herman-Melville/dp/1853260088/ref=sr_1_2?dchild=1&keywords=moby+dick&qid=1610208531&sr=8-2 'Mobey Dick') - Herman Melville
