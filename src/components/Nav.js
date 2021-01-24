@@ -2,18 +2,36 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
+import skyline from '../assets/images/long-skyline.svg';
+
 const NavWrapper = styled.nav`
-  padding-top: 4rem;
+  margin-top: 12rem;
   padding-bottom: 2rem;
   display: grid;
   grid-template-columns: 1fr;
+  position: relative;
+
+  /* skyline */
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url(${skyline});
+    background-repeat: repeat-x;
+    background-position: top center;
+    top: -180px;
+    left: 0;
+    height: 181px;
+    width: 100%;
+  }
 
   /* LOGO */
   .logo {
     display: flex;
     justify-content: center;
-    margin-bottom: -48px;
+    margin-bottom: -32px;
+    padding: 0.5rem 0 0;
     z-index: 10;
+    background-color: var(--superDarkGrey);
 
     a {
       &::before {
@@ -24,9 +42,8 @@ const NavWrapper = styled.nav`
 
   /* NAVLINKS */
   ul {
-    /* min-height: 6rem; */
-    background: var(--white);
-    box-shadow: var(--navShadow), var(--baseShadow);
+    background: var(--superDarkGrey);
+    box-shadow: var(--baseShadow);
     /* border-bottom: 0.25rem solid var(--primary); */
     list-style: none;
     padding: 2.5rem 1.5rem 1.5rem;
@@ -51,9 +68,10 @@ const NavWrapper = styled.nav`
   }
 
   a {
+    color: var(--white);
     text-decoration: none;
     font-size: var(--h4);
-    font-weight: 600;
+    font-weight: 400;
     position: relative;
     z-index: 10;
 
@@ -81,6 +99,8 @@ const NavWrapper = styled.nav`
     }
 
     &[aria-current='page'] {
+      color: var(--superDarkGrey);
+
       &::before {
         height: calc(var(--h4) + 4px);
       }
@@ -109,7 +129,7 @@ const Nav = () => {
     query {
       logo: file(relativePath: { eq: "Logo.png" }) {
         childImageSharp {
-          resize(width: 400) {
+          resize(width: 722) {
             src
           }
         }
@@ -122,7 +142,7 @@ const Nav = () => {
       <h1 className="logo">
         <Link to="/">
           <img
-            width="144"
+            width="160"
             src={data.logo.childImageSharp.resize.src}
             alt="Will Luft"
           />

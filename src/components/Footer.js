@@ -33,6 +33,10 @@ const FooterWrapper = styled.footer`
   }
 
   a > svg > path {
+    fill: var(--primary);
+  }
+
+  a > svg > path {
     transition: var(--transition);
   }
 
@@ -89,7 +93,7 @@ const Footer = () => {
     query {
       logo: file(relativePath: { eq: "Logo-light.png" }) {
         childImageSharp {
-          resize(width: 400) {
+          resize(width: 722) {
             src
           }
         }
@@ -195,7 +199,7 @@ const Footer = () => {
           </p>
         </div>
         <div>
-          <img src={logo} alt="Will Luft" width="128" />
+          <img src={logo} alt="Will Luft" width="100%" />
         </div>
       </div>
     </FooterWrapper>

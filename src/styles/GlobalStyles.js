@@ -19,6 +19,8 @@ const GlobalStyles = createGlobalStyle`
     --grey: hsl(208, 12%, 58%);
     --lightGrey: hsl(210, 16%, 76%);
     --superLightGrey: hsl(208, 21%, 88%);
+    --purple: #3e004f;
+    --pink: #65002c;
 
     --primary: var(--teal);
     --darkPrimary: var(--darkTeal);
@@ -79,13 +81,16 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-  min-height: calc(100vh - 3rem);
-  font-weight: 400;
-  line-height: 1.65;
+    min-height: calc(100vh - 3rem);
+    font-weight: 400;
+    line-height: 1.65;
 
     /* Base styles */
-    color: var(--superDarkGrey);
-    background: var(--white);
+    --background-color: var(--white);
+    --text-color: var(--superDarkGrey);
+
+    color: var(--text-color);
+    background: var(--background-color);
     background-image: url(${zigzag});
     background-attachment: fixed;
 
@@ -148,14 +153,14 @@ a:hover {
   }
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--teal) var(--superDarkGrey);
+    scrollbar-color: var(--primary) var(--superDarkGrey);
   }
   body::-webkit-scrollbar-track {
     background: var(--superDarkGrey);
   }
   body::-webkit-scrollbar-thumb {
-    background-color: var(--teal);
-    background-image: var(--teal);
+    background-color: var(--primary);
+    background-image: var(--primary);
     border-radius: 6px;
     border: 3px solid var(--superDarkGrey);
   }
