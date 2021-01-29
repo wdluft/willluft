@@ -5,7 +5,7 @@ import darkZigzag from '../assets/images/zig-zag-dark.svg';
 
 const FooterWrapper = styled.footer`
   background: var(--superDarkGrey);
-  background-image: url(${darkZigzag});
+  /* background-image: url(${darkZigzag}); */
   background-attachment: fixed;
   color: var(--white);
   padding: 4rem 0 2rem;

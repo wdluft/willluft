@@ -14,13 +14,11 @@ const GlobalStyles = createGlobalStyle`
     --lightTeal: hsl(180, 98%, 76%);
     --superLightTeal: hsl(180, 100%, 88%);
     --yellow: hsl(48, 100%, 52%);
-    --superDarkGrey: hsl(209, 15%, 28%);
+    --superDarkGrey: hsl(209, 15%, 15%);
     --darkGrey: hsl(207, 12%, 43%);
     --grey: hsl(208, 12%, 58%);
     --lightGrey: hsl(210, 16%, 76%);
     --superLightGrey: hsl(208, 21%, 88%);
-    --purple: #3e004f;
-    --pink: #65002c;
 
     --primary: var(--teal);
     --darkPrimary: var(--darkTeal);
