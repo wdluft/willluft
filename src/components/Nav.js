@@ -142,7 +142,7 @@ const Nav = () => {
       <h1 className="logo">
         <Link to="/">
           <img
-            width="160"
+            width="224"
             src={data.logo.childImageSharp.resize.src}
             alt="Will Luft"
           />
