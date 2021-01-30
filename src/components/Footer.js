@@ -1,11 +1,9 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import darkZigzag from '../assets/images/zig-zag-dark.svg';
 
 const FooterWrapper = styled.footer`
   background: var(--superDarkGrey);
-  background-image: url(${darkZigzag});
   background-attachment: fixed;
   color: var(--white);
   padding: 4rem 0 2rem;
@@ -30,6 +28,10 @@ const FooterWrapper = styled.footer`
 
   a {
     color: var(--white);
+  }
+
+  a > svg > path {
+    fill: var(--primary);
   }
 
   a > svg > path {
@@ -70,6 +72,10 @@ const FooterWrapper = styled.footer`
     font-size: var(--baseFontSize);
   }
 
+  .footerLogo {
+    max-width: 20rem;
+  }
+
   @media screen and (min-width: 40rem) {
     .gridWrapper {
       grid-template-columns: repeat(2, 1fr);
@@ -89,7 +95,7 @@ const Footer = () => {
     query {
       logo: file(relativePath: { eq: "Logo-light.png" }) {
         childImageSharp {
-          resize(width: 400) {
+          resize(width: 722) {
             src
           }
         }
@@ -195,7 +201,7 @@ const Footer = () => {
           </p>
         </div>
         <div>
-          <img src={logo} alt="Will Luft" width="128" />
+          <img src={logo} alt="Will Luft" width="100%" className="footerLogo" />
         </div>
       </div>
     </FooterWrapper>
