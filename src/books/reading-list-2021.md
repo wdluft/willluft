@@ -1,7 +1,7 @@
 ---
 slug: 'reading-list-2021'
 title: 'Reading List 2021'
-date: '2021-01-09'
+date: '2021-01-30'
 type: 'books'
 ---
 
