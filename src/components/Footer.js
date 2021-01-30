@@ -1,11 +1,9 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import darkZigzag from '../assets/images/zig-zag-dark.svg';
 
 const FooterWrapper = styled.footer`
   background: var(--superDarkGrey);
-  /* background-image: url(${darkZigzag}); */
   background-attachment: fixed;
   color: var(--white);
   padding: 4rem 0 2rem;
@@ -72,6 +70,10 @@ const FooterWrapper = styled.footer`
   .copyright {
     color: var(--grey);
     font-size: var(--baseFontSize);
+  }
+
+  .footerLogo {
+    max-width: 20rem;
   }
 
   @media screen and (min-width: 40rem) {
@@ -199,7 +201,7 @@ const Footer = () => {
           </p>
         </div>
         <div>
-          <img src={logo} alt="Will Luft" width="100%" />
+          <img src={logo} alt="Will Luft" width="100%" className="footerLogo" />
         </div>
       </div>
     </FooterWrapper>
