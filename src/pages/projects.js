@@ -21,7 +21,7 @@ const ProjectsWrapper = styled.div`
     color: var(--superLightGrey);
     border: 4px solid var(--primary);
     box-shadow: var(--mdShadow);
-    text-align: center;
+    text-align: left;
     padding: 1rem;
     height: 100%;
     gap: 1rem;
@@ -33,18 +33,30 @@ const ProjectsWrapper = styled.div`
     @media screen and (min-width: 40rem) {
       max-width: 100%;
       display: grid;
-      grid-template-columns: 1fr;
       grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .projectTitle {
+    text-align: center;
+
+    @media screen and (min-width: 40rem) {
+      text-align: inherit;
+    }
+  }
+
+  .projectImage {
+    border: 4px solid var(--primary);
+
+    @media screen and (min-width: 40rem) {
+      grid-row: 1/3;
+      grid-column: 2/-1;
     }
   }
 
   .gatsby-image-wrapper {
     display: flex;
     justify-content: center;
-    @media screen and (min-width: 40rem) {
-      grid-row: 1/3;
-      grid-column: 2/-1;
-    }
   }
 
   img {
@@ -61,6 +73,8 @@ const ProjectsWrapper = styled.div`
   }
 
   .projectLinks {
+    text-align: center;
+
     a {
       margin: 0 1.5rem;
     }
@@ -90,8 +104,15 @@ const Projects = ({ data }) => {
           );
           return (
             <div key={project.github} className="project">
-              <Img fluid={projectImg.childImageSharp.fluid} />
-              <h4>{project.title}</h4>
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="projectImage"
+              >
+                <Img fluid={projectImg.childImageSharp.fluid} />
+              </a>
+              <h4 className="projectTitle">{project.title}</h4>
               <div className="projectLinks">
                 <a href={project.url} target="_blank" rel="noopener noreferrer">
                   <svg

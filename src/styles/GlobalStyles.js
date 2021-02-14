@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     --lightTeal: hsl(180, 98%, 76%);
     --superLightTeal: hsl(180, 100%, 88%);
     --yellow: hsl(48, 100%, 52%);
-    --superDarkGrey: hsl(209, 15%, 28%);
+    --superDarkGrey: hsl(209, 15%, 15%);
     --darkGrey: hsl(207, 12%, 43%);
     --grey: hsl(208, 12%, 58%);
     --lightGrey: hsl(210, 16%, 76%);
@@ -79,13 +79,16 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-  min-height: calc(100vh - 3rem);
-  font-weight: 400;
-  line-height: 1.65;
+    min-height: calc(100vh - 3rem);
+    font-weight: 400;
+    line-height: 1.65;
 
     /* Base styles */
-    color: var(--superDarkGrey);
-    background: var(--white);
+    --background-color: var(--white);
+    --text-color: var(--superDarkGrey);
+
+    color: var(--text-color);
+    background: var(--background-color);
     background-image: url(${zigzag});
     background-attachment: fixed;
 
@@ -148,14 +151,14 @@ a:hover {
   }
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--teal) var(--superDarkGrey);
+    scrollbar-color: var(--primary) var(--superDarkGrey);
   }
   body::-webkit-scrollbar-track {
     background: var(--superDarkGrey);
   }
   body::-webkit-scrollbar-thumb {
-    background-color: var(--teal);
-    background-image: var(--teal);
+    background-color: var(--primary);
+    background-image: var(--primary);
     border-radius: 6px;
     border: 3px solid var(--superDarkGrey);
   }

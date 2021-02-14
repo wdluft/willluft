@@ -18,6 +18,14 @@ export const projectsList = [
     image: 'randomcommander',
   },
   {
+    title: 'boxface',
+    url: `https://see-face-box-face.herokuapp.com/`,
+    github: `https://github.com/wdluft/ztm-see-face-box-face-front-end`,
+    technologies: ['React', 'Styled Components', 'NodeJs', 'Express'],
+    description: `Identify faces in pictures using the Clarifai face detection API.`,
+    image: 'boxface',
+  },
+  {
     title: 'Tomato Timer',
     url: 'https://mystifying-heisenberg-8bc659.netlify.com/',
     github: 'https://github.com/wdluft/tomato-timer',
