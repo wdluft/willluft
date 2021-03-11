@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
     --lightTeal: hsl(180, 98%, 76%);
     --superLightTeal: hsl(180, 100%, 88%);
     --yellow: hsl(48, 100%, 52%);
+    --orange: hsl(20, 100%, 64%);
     --superDarkGrey: hsl(209, 15%, 15%);
     --darkGrey: hsl(207, 12%, 43%);
     --grey: hsl(208, 12%, 58%);
@@ -25,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
     --superDarkPrimary: var(--superDarkTeal);
     --lightPrimary: var(--lightTeal);
     --superLightPrimary: var(--superLightTeal);
-    --secondary: var(--yellow);
+    --secondary: var(--orange);
     --gradient: radial-gradient(50% 50% at 50% 50%, #FFCF0A 35.42%, #46FBFB 100%);
     --linearGradient: linear-gradient(to top right, #46FBFB 0%, #C2FFFF 49%, #FFFFFF 50%, #FFF3C2 51%, #FFCF0A 100%);
     --verticalGradient: linear-gradient(to top, #46FBFB 0%, #C2FFFF 49%, #FFFFFF 50%, #FFF3C2 51%, #FFCF0A 100%);
@@ -141,7 +142,7 @@ a {
 }
 
 a:hover {
-  text-decoration-color: var(--darkPrimary);
+  text-decoration-color: var(--secondary);
 }
 
 
@@ -188,7 +189,7 @@ a:hover {
     text-decoration-color: var(--superDarkGrey);
 
     &:hover {
-      background: var(--lightPrimary);
+      background: var(--secondary);
     }
   }
 

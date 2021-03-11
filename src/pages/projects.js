@@ -47,6 +47,11 @@ const ProjectsWrapper = styled.div`
 
   .projectImage {
     border: 4px solid var(--primary);
+    transition: var(--transition);
+
+    &:hover {
+      border-color: var(--secondary);
+    }
 
     @media screen and (min-width: 40rem) {
       grid-row: 1/3;
@@ -87,6 +92,11 @@ const ProjectsWrapper = styled.div`
   }
   svg path {
     fill: var(--primary);
+    transition: var(--transition);
+
+    &:hover {
+      fill: var(--secondary);
+    }
   }
 `;
 
