@@ -30,6 +30,7 @@ const BooksWrapper = styled.div`
 
       &:hover {
         text-decoration: underline;
+        text-decoration-color: var(--secondary);
       }
     }
   }

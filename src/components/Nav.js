@@ -95,6 +95,7 @@ const NavWrapper = styled.nav`
         /* transform: skew(24deg) rotate(var(--rotate)) scaleX(var(--scale))
             scaleY(2.5); */
         height: 8px;
+        background-color: var(--secondary);
       }
     }
 
@@ -103,6 +104,7 @@ const NavWrapper = styled.nav`
 
       &::before {
         height: calc(var(--h4) + 4px);
+        background-color: var(--primary);
       }
     }
   }

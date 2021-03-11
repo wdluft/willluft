@@ -31,6 +31,7 @@ const BlogWrapper = styled.div`
 
     &:hover {
       text-decoration: underline;
+      text-decoration-color: var(--secondary);
     }
   }
 
