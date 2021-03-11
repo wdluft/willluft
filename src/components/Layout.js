@@ -9,9 +9,10 @@ import battlestation from '../assets/images/battlestation.jpg';
 const LayoutWrapper = styled.div`
   min-height: calc(100vh - 3rem);
 
-  &.welcome {
+  /* Removing background image on home page */
+  /* &.welcome {
     background: url(${battlestation}) no-repeat top center;
-  }
+  } */
 `;
 
 function Layout({ children, location }) {
