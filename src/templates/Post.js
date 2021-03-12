@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SEO from '../components/SEO';
 
-const PostWrapper = styled.div`
+const PostWrapper = styled.article`
   h2 {
     font-size: var(--h3);
 
