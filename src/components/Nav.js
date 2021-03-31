@@ -161,9 +161,6 @@ const Nav = () => {
           <Link to="/projects">Projects</Link>
         </li>
         <li>
-          <Link to="/blog">Blog</Link>
-        </li>
-        <li>
           <Link to="/bookshelf">Bookshelf</Link>
         </li>
       </ul>
