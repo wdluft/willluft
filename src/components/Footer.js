@@ -100,25 +100,9 @@ const Footer = () => {
           }
         }
       }
-      # posts: allMarkdownRemark(
-      #   sort: { fields: frontmatter___date, order: DESC }
-      #   limit: 3
-      # ) {
-      #   edges {
-      #     node {
-      #       frontmatter {
-      #         blurb
-      #         date(formatString: "MMMM DD, YYYY")
-      #         slug
-      #         title
-      #       }
-      #     }
-      #   }
-      # }
     }
   `);
 
-  // const posts = data.posts.edges;
   const logo = data.logo.childImageSharp.resize.src;
 
   return (

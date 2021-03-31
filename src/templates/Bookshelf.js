@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SEO from '../components/SEO';
 
-const BookListWrapper = styled.div`
+const BookListWrapper = styled.article`
   h2 {
     font-size: var(--h3);
 
