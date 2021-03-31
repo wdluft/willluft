@@ -20,6 +20,7 @@ Some books are so good that they're worth rereading every year. Below are some o
 
 ####Fiction
 
+- [_The Kingkiller Chronicle (series)_](https://smile.amazon.com/Kingkiller-Chronicle-Collection-Patrick-Rothfuss/dp/1473232287/ref=sr_1_3?crid=T3HR8WFLRTAY&dchild=1&keywords=kingkiller+chronicles&qid=1617202333&sprefix=kingkiller+ch%2Caps%2C183&sr=8-3 'The Kingkiller Chronicle Series') - Patrick Rothfuss
 - [_Harry Potter (series)_](https://smile.amazon.com/Harry-Potter-Paperback-Box-Books/dp/0545162076/ref=sr_1_2?dchild=1&keywords=harry+potter&qid=1603032000&s=books&sr=1-2 'Harry Potter Box Set') - J.K. Rowling
 - [_Percy Jackson and the Olympians (series)_](https://smile.amazon.com/Jackson-Olympians-Paperback-covers-poster/dp/1484707230/ref=sr_1_3?dchild=1&keywords=percy+jackson&qid=1604245833&s=books&sr=1-3 'Percy Jackson and the Olympians') - Rick Riordan
 - [_The Heroes of Olympus (series)_](https://smile.amazon.com/Heroes-Olympus-Paperback-Boxed-Anniversary/dp/1368053092/ref=sr_1_3?crid=72QA3G9OODM9&dchild=1&keywords=the+heroes+of+olympus&qid=1604245863&s=books&sprefix=the+heroes+of+ol%2Cstripbooks%2C191&sr=1-3 'The Heroes of Olympus') - Rick Riordan
