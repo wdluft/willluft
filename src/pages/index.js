@@ -2,40 +2,40 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import SEO from '../components/SEO';
+import layeredPeaks from '../assets/images/layered-peaks-primary-large.svg';
 
 const HomePageWrapper = styled.div`
   .intro {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
 
   h1 {
     font-size: var(--h4);
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
 
     span {
       font-size: var(--h2);
-      margin-top: 1rem;
+      /* margin-top: 1rem; */
       position: relative;
       z-index: 10;
       display: inline-block;
 
-      &::before {
-        --rotate: 2.5deg;
+      /* &::before {
         --scale: 1.1;
         content: '';
         position: absolute;
         width: 100%;
-        height: calc(var(--h2) + 16px);
-        background-color: var(--primary);
+
+        background-image: url(${layeredPeaks});
         bottom: 0;
         left: 0;
         transform: skew(24deg) rotate(var(--rotate)) scaleX(var(--scale));
         transition: var(--transition);
         z-index: -10;
-      }
+      } */
     }
   }
 
@@ -57,9 +57,9 @@ const HomePageWrapper = styled.div`
       span {
         font-size: var(--superBigText);
 
-        &::before {
-          height: calc(var(--superBigText) + 16px);
-        }
+        /* &::before {
+          height: calc(var(--superBigText) + 40px);
+        } */
       }
     }
   }

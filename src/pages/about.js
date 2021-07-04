@@ -57,8 +57,8 @@ const About = () => (
         <span className="bold">Apart from work</span> and web development, I
         love playing and watching sports, Magic the Gathering, and most recently
         Blaseball. I try to get out and play soccer or volleyball at least once
-        a week. My favorite teams are Chelsea Fc, the Green Bay Packers, and the
-        New York Islanders.
+        a week. You can find me rooting for Chelsea FC, the Green Bay Packers,
+        and the New York Islanders.
       </p>
       <p>
         <span className="bold">I'm also an </span>

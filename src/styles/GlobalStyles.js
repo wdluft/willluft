@@ -8,13 +8,14 @@ const GlobalStyles = createGlobalStyle`
     /* COLORS */
     --black: hsl(0, 0%, 0%);
     --white: hsl(0, 100%, 100%);
-    --teal: hsl(180, 94%, 58%);
+    --teal: hsl(179.3, 84.8%, 61.2%);
     --darkTeal: hsl(182, 92%, 43%);
     --superDarkTeal: hsl(185, 85%, 28%);
     --lightTeal: hsl(180, 98%, 76%);
     --superLightTeal: hsl(180, 100%, 88%);
     --yellow: hsl(48, 100%, 52%);
     --orange: hsl(20, 100%, 64%);
+    --pink: hsl(323.6, 69.5%, 61.4%);
     --superDarkGrey: hsl(209, 15%, 15%);
     --darkGrey: hsl(207, 12%, 43%);
     --grey: hsl(208, 12%, 58%);
@@ -26,10 +27,7 @@ const GlobalStyles = createGlobalStyle`
     --superDarkPrimary: var(--superDarkTeal);
     --lightPrimary: var(--lightTeal);
     --superLightPrimary: var(--superLightTeal);
-    --secondary: var(--orange);
-    --gradient: radial-gradient(50% 50% at 50% 50%, #FFCF0A 35.42%, #46FBFB 100%);
-    --linearGradient: linear-gradient(to top right, #46FBFB 0%, #C2FFFF 49%, #FFFFFF 50%, #FFF3C2 51%, #FFCF0A 100%);
-    --verticalGradient: linear-gradient(to top, #46FBFB 0%, #C2FFFF 49%, #FFFFFF 50%, #FFF3C2 51%, #FFCF0A 100%);
+    --secondary: var(--pink);
 
     /* TYPOGRAPHY */
     --superBigText: 5rem;

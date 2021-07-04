@@ -2,7 +2,10 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
-import skyline from '../assets/images/long-skyline.svg';
+import peaks from '../assets/images/layered-peaks.svg';
+import singlePeak from '../assets/images/single-layer-peak.svg';
+import singlePeakTall from '../assets/images/single-layer-peak-tall.svg';
+import singlePeakSecondary from '../assets/images/single-layer-peak-secondary.svg';
 
 const NavWrapper = styled.nav`
   margin-top: 12rem;
@@ -15,10 +18,10 @@ const NavWrapper = styled.nav`
   &::before {
     content: '';
     position: absolute;
-    background-image: url(${skyline});
+    background-image: url(${peaks});
     background-repeat: repeat-x;
     background-position: top center;
-    top: -180px;
+    top: -174px;
     left: 0;
     height: 181px;
     width: 100%;
@@ -77,15 +80,18 @@ const NavWrapper = styled.nav`
 
     &::before {
       --rotate: -2.5deg;
-      --scale: 1.2;
+      --scale: 1.1;
       content: '';
       position: absolute;
       width: 100%;
-      height: 4px;
-      background-color: var(--primary);
-      bottom: 0;
+      height: 10px;
+      /* background-color: var(--primary); */
+      background-image: url(${singlePeak});
+      background-repeat: repeat-x;
+      background-position: top center;
+      bottom: -6px;
       left: 0;
-      transform: skew(-24deg) rotate(var(--rotate)) scaleX(var(--scale));
+      transform: scaleX(var(--scale));
       transition: var(--transition);
       z-index: -10;
     }
@@ -95,7 +101,7 @@ const NavWrapper = styled.nav`
         /* transform: skew(24deg) rotate(var(--rotate)) scaleX(var(--scale))
             scaleY(2.5); */
         height: 8px;
-        background-color: var(--secondary);
+        background-image: url(${singlePeakSecondary});
       }
     }
 
@@ -103,8 +109,9 @@ const NavWrapper = styled.nav`
       color: var(--superDarkGrey);
 
       &::before {
-        height: calc(var(--h4) + 4px);
-        background-color: var(--primary);
+        height: calc(var(--h4) + 14px);
+        /* background-color: var(--primary); */
+        background-image: url(${singlePeakTall});
       }
     }
   }
@@ -119,7 +126,7 @@ const NavWrapper = styled.nav`
 
       &[aria-current='page'] {
         &::before {
-          height: calc(var(--h5) + 4px);
+          height: calc(var(--h5) + 14px);
         }
       }
     }
