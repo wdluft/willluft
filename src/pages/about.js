@@ -39,8 +39,8 @@ const About = () => (
         <span className="bold">I was born</span> in Texas and grew up on Long
         Island. I went to Fordham University in the Bronx, where I studied
         Political Science and Theology. When I graduated, I started working at
-        DonorsChoose, where I've been doing customer support ever since. You can
-        see <a href="#resume">my resume</a> below if you want to know more!
+        DonorsChoose, where I did customer support for six years and am now
+        doing fulfillment system operations.
       </p>
 
       <p>
@@ -68,8 +68,8 @@ const About = () => (
         keep in mind, or because I just really enjoy them.
       </p>
 
-      <h2 id="resume">Resume</h2>
-      <Resume />
+      {/* <h2 id="resume">Resume</h2>
+      <Resume /> */}
     </AboutPageStyle>
   </>
 );

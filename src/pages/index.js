@@ -95,8 +95,9 @@ const Index = () => {
           />
         </div>
         <p>
-          By day I help support public schools and teachers, doing customer
-          support for <a href="https://www.donorschoose.org/">DonorsChoose</a>.
+          By day I help support public schools and teachers, doing Fulfillment
+          System Operations for{' '}
+          <a href="https://www.donorschoose.org/">DonorsChoose</a>.
         </p>
         <p>
           By night I keep busy by <Link to="/projects">building websites</Link>,
