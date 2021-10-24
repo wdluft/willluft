@@ -16,8 +16,6 @@ const Index = () => {
     }
   `);
 
-  console.log(data.headshot.childImageSharp.resize.src);
-
   return (
     <>
       <SEO title="Home" />
