@@ -108,7 +108,7 @@ const Socials = styled.div`
 
   svg {
     display: block;
-    stroke: #1fffff;
+    stroke: var(--primary);
   }
 `;
 
@@ -129,7 +129,7 @@ const SocialLink = styled.a`
 
   svg {
     display: block;
-    stroke: #1fffff;
+    stroke: var(--primary);
     /* Exit Animation */
     transition: all 400ms cubic-bezier(0.12, 0, 0.39, 0);
   }
@@ -139,7 +139,7 @@ const SocialLink = styled.a`
       svg {
         /* Enter Animation */
         transition: all 300ms cubic-bezier(0.22, 1, 0.36, 1);
-        stroke: #ff44d5;
+        stroke: var(--secondary);
       }
     }
   }
