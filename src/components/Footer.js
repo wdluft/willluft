@@ -66,8 +66,8 @@ const Wrapper = styled.footer`
     transform: rotate(180deg);
     width: 100%;
     height: 64px;
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.06))
-      drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.06))
+      drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.1));
 
     @media ${QUERIES.tabletAndUp} {
       top: -128px;
