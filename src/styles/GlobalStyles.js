@@ -152,7 +152,7 @@ const GlobalStyles = createGlobalStyle`
     --border-size: calc(var(--size) / 2);
     border: var(--border-size) var(--gray-super-dark) solid;
 
-    height: 100%;
+    min-height: 100%;
   }
 
   #___gatsby, #gatsby-focus-wrapper {
@@ -163,7 +163,7 @@ const GlobalStyles = createGlobalStyle`
     --text-color: var(--gray-super-dark);
     --background-color: var(--white);
     --primary: var(--green-base);
-    --secondary: var(--orange-base);
+    --secondary: var(--red-base);
     --max-body-width: calc(100vw - var(--size));
     --max-content-width: 768px;
     --content-padding: 16px;
@@ -193,23 +193,23 @@ const GlobalStyles = createGlobalStyle`
     /* Scrollbar Styles */
   /* ========================================================= */
   body::-webkit-scrollbar {
-    width: 12px;
+    width: 16px;
   }
 
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--primary) var(--super-dark-grey);
+    scrollbar-color: var(--primary) var(--gray-super-dark);
   }
 
   body::-webkit-scrollbar-track {
-    background: var(--super-dark-grey);
+    background: var(--gray-super-dark);
   }
 
   body::-webkit-scrollbar-thumb {
     background-color: var(--primary);
     background-image: var(--primary);
-    border-radius: 6px;
-    border: 3px solid var(--super-dark-grey);
+    border-radius: 8px;
+    border: 3px solid var(--gray-super-dark);
   }
 `;
 

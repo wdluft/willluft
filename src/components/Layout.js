@@ -12,6 +12,9 @@ const LayoutWrapper = styled.div`
   flex-direction: column;
 
   main {
+    width: 100%;
+    max-width: var(--max-content-width);
+    margin: 32px auto 160px;
     flex: 1;
   }
 `;
