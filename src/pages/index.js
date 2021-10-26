@@ -21,19 +21,19 @@ const Index = () => {
       <SEO title="Home" />
       <h1>Hi, I'm Will!</h1>
       <p>
-        By day I help support public schools and teachers, doing Fulfillment
-        System Operations for{' '}
+        By day I support the fulfillment system operations of{' '}
         <a href="https://www.donorschoose.org/">DonorsChoose</a>.
       </p>
       <p>
-        By night I keep busy by <Link to="/projects">building websites</Link>,
-        finding projects to keep my hands busy, and trying to stay in shape to
-        play soccer and volleyball.
+        By night I keep busy by{' '}
+        <Link to="/projects">working on web development projects</Link>, finding
+        crafts to keep my hands busy, and trying to stay in shape to play soccer
+        and volleyball.
       </p>
 
       <p>
-        You can <Link to="/about">read more about me here,</Link> or checkout{' '}
-        <Link to="/bookshelf">what I've been reading</Link>.
+        You can <Link to="/about">read more about me</Link> or checkout{' '}
+        <Link to="/bookshelf">some of the books that I've read</Link>.
       </p>
     </>
   );
