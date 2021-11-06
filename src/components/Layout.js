@@ -16,6 +16,7 @@ const LayoutWrapper = styled.div`
     max-width: var(--max-content-width);
     margin: 32px auto 160px;
     flex: 1;
+    padding: 0 24px;
   }
 `;
 
