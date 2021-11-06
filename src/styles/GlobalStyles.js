@@ -131,6 +131,13 @@ const GlobalStyles = createGlobalStyle`
     --system-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --body-font: 'Rubik';
     --header-font: 'Rubik';
+    --fs-900: ${64 / 16}rem;
+    --fs-800: ${48 / 16}rem;
+    --fs-700: ${32 / 16}rem;
+    --fs-600: ${24 / 16}rem;
+    --fs-400: ${16 / 16}rem;
+    --fs-300: ${12 / 16}rem;
+
 
     --transition: all 250ms;
   }
@@ -167,7 +174,7 @@ const GlobalStyles = createGlobalStyle`
     --max-body-width: calc(100vw - var(--size));
     --max-content-width: 768px;
     --content-padding: 16px;
-    --body-text-size: 1rem;
+    --body-text-size: var(--fs-400);
 
     color: var(--text-color);
     background-color: var(--background-color);
@@ -190,7 +197,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   /* ========================================================= */
-    /* Scrollbar Styles */
+  /* Scrollbar Styles */
   /* ========================================================= */
   body::-webkit-scrollbar {
     width: 16px;
