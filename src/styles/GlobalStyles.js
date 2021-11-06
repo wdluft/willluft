@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import { COLORS, QUERIES } from '../utils/constants';
-import '@fontsource/rubik/index.css';
 import '@fontsource/rubik/variable.css';
 import '@fontsource/fira-mono';
 

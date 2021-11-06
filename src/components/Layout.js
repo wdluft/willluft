@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import '@fontsource/rubik';
+import '@fontsource/rubik/variable.css';
 import '@fontsource/fira-mono';
 import GlobalStyles from '../styles/GlobalStyles';
 import Header from './Header';
