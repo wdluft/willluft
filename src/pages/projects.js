@@ -1,14 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage } from 'gatsby-plugin-image';
 import SEO from '../components/SEO';
+import PageHeading from '../components/PageHeading';
 
 const Projects = ({ data }) => (
   // const images = data.images.nodes;
 
   <>
     <SEO title="Projects" />
-    <h1>Projects</h1>
+    <PageHeading>Projects</PageHeading>
   </>
 );
 export default Projects;

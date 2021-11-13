@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import SEO from '../components/SEO';
-import PageHeading from './PageHeading';
+import PageHeading from '../components/PageHeading';
 
 const About = () => (
   <>

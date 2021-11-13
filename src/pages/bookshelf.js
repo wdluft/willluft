@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import PageHeading from '../components/PageHeading';
 import SEO from '../components/SEO';
 
 const Bookshelf = () => (
@@ -40,7 +41,7 @@ const Bookshelf = () => (
 
   <>
     <SEO title="Book Lists" />
-    <h1>Bookshelf</h1>
+    <PageHeading>Bookshelf</PageHeading>
   </>
 );
 export default Bookshelf;

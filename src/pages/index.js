@@ -3,7 +3,7 @@ import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import SEO from '../components/SEO';
-import PageHeading from './PageHeading';
+import PageHeading from '../components/PageHeading';
 import { QUERIES } from '../utils/constants';
 import HeadingDecoration from '../assets/images/page-heading-underline.svg';
 
