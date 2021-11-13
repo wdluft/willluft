@@ -7,7 +7,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 const LayoutWrapper = styled.div`
-  min-height: 100%;
+  min-height: calc(100vh - var(--size));
   display: flex;
   flex-direction: column;
 

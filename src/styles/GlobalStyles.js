@@ -87,6 +87,7 @@ const GlobalStyles = createGlobalStyle`
   /* END CSS RESET */
   /* ========================================================= */
 
+  /* Custom Properties */
   :root {
     /* COLORS */
     --green-base: hsl(${COLORS.green.base});
@@ -147,22 +148,23 @@ const GlobalStyles = createGlobalStyle`
     /* float above the Gatsby app */
     isolation: isolate;
   }
-
+  
+  
   html {
-    --size: 16px;
+    --size: 24px;
     @media ${QUERIES.tabletAndUp} {
-      --size: 24px;
+      --size: 32px;
     }
-
+    
     /* Full page border */
     --border-size: calc(var(--size) / 2);
     border: var(--border-size) var(--gray-super-dark) solid;
-
+    
     min-height: 100%;
   }
-
-  #___gatsby, #gatsby-focus-wrapper {
-    height: 100%;
+  
+  body, #___gatsby, #gatsby-focus-wrapper {
+    min-height: calc(100vh - var(--size));
   }
 
   body {
@@ -175,12 +177,11 @@ const GlobalStyles = createGlobalStyle`
     --content-padding: 16px;
     --body-text-size: var(--fs-400);
 
-    color: var(--text-color);
-    background-color: var(--background-color);
-    height: 100%;
-    font-family: var(--body-font), var(--system-font-stack);
     max-width: var(--max-body-width);
+    background-color: var(--background-color);
+    font-family: var(--body-font), var(--system-font-stack);
     font-size: var(--body-text-size);
+    color: var(--text-color);
   }
 
   a {
@@ -217,6 +218,7 @@ const GlobalStyles = createGlobalStyle`
     border-radius: 8px;
     border: 3px solid var(--gray-super-dark);
   }
+
 `;
 
 export default GlobalStyles;
