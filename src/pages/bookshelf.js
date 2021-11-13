@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import ComingSoon from '../components/ComingSoon';
 import PageHeading from '../components/PageHeading';
 import SEO from '../components/SEO';
 
@@ -42,6 +43,7 @@ const Bookshelf = () => (
   <>
     <SEO title="Book Lists" />
     <PageHeading>Bookshelf</PageHeading>
+    <ComingSoon />
   </>
 );
 export default Bookshelf;

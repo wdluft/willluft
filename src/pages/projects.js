@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import SEO from '../components/SEO';
 import PageHeading from '../components/PageHeading';
+import ComingSoon from '../components/ComingSoon';
 
 const Projects = ({ data }) => (
   // const images = data.images.nodes;
@@ -10,6 +11,7 @@ const Projects = ({ data }) => (
   <>
     <SEO title="Projects" />
     <PageHeading>Projects</PageHeading>
+    <ComingSoon />
   </>
 );
 export default Projects;
