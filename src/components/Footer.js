@@ -49,19 +49,20 @@ function Footer() {
 
 const Wrapper = styled.footer`
   background-color: var(--gray-super-dark);
-  width: 100%;
+  min-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 32px 16px;
   position: relative;
+  margin-bottom: -1px;
 
   &::before {
     position: absolute;
     content: '';
     background-image: url(${MobilePeaks});
     background-repeat: repeat-x;
-    top: -64px;
+    top: -62px;
     left: 0;
     transform: rotate(180deg);
     width: 100%;
@@ -70,7 +71,7 @@ const Wrapper = styled.footer`
       drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.1));
 
     @media ${QUERIES.tabletAndUp} {
-      top: -128px;
+      top: -126px;
       background-image: url(${Peaks});
       height: 128px;
     }

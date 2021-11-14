@@ -42,12 +42,13 @@ function Header() {
 }
 
 const Wrapper = styled.header`
-  max-width: 100%;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: -1px;
 
   &::after {
     content: '';
