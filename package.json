@@ -67,5 +67,8 @@
     "rules": {
       "react/prop-types": 0
     }
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
