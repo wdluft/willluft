@@ -161,6 +161,21 @@ const GlobalStyles = createGlobalStyle`
     border: var(--border-size) var(--gray-super-dark) solid;
     
     min-height: 100%;
+    position: relative;
+
+    &:after {
+      box-sizing: content-box;
+      display: block;
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: calc(var(--border-size) * -1);
+      left: calc(var(--border-size) * -1);
+      z-index: -3;
+      border: var(--border-size) var(--gray-super-dark) solid;
+      background: var(--white);
+    }
   }
   
   body, #___gatsby, #gatsby-focus-wrapper {
