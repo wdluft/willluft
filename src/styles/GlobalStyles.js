@@ -1,207 +1,239 @@
 import { createGlobalStyle } from 'styled-components';
-import 'fontsource-rubik';
-import 'fontsource-fira-mono';
-import zigzag from '../assets/images/zig-zag.svg';
+import { COLORS, QUERIES } from '../utils/constants';
+import '@fontsource/rubik/variable.css';
+import '@fontsource/fira-mono';
 
 const GlobalStyles = createGlobalStyle`
+  /* ========================================================= */
+  /* START CSS RESET */
+  /* COPIED FROM https://piccalil.li/blog/a-modern-css-reset/ */
+  /* ========================================================= */
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Remove default margin */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role='list'],
+  ol[role='list'] {
+    list-style: none;
+  }
+
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+
+  /* Set core body defaults */
+  body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* ========================================================= */
+  /* END CSS RESET */
+  /* ========================================================= */
+
+  /* Custom Properties */
   :root {
     /* COLORS */
-    --black: hsl(0, 0%, 0%);
-    --white: hsl(0, 100%, 100%);
-    --teal: hsl(179.3, 84.8%, 61.2%);
-    --darkTeal: hsl(182, 92%, 43%);
-    --superDarkTeal: hsl(185, 85%, 28%);
-    --lightTeal: hsl(180, 98%, 76%);
-    --superLightTeal: hsl(180, 100%, 88%);
-    --yellow: hsl(48, 100%, 52%);
-    --orange: hsl(20, 100%, 64%);
-    --pink: hsl(323.6, 69.5%, 61.4%);
-    --superDarkGrey: hsl(209, 15%, 15%);
-    --darkGrey: hsl(207, 12%, 43%);
-    --grey: hsl(208, 12%, 58%);
-    --lightGrey: hsl(210, 16%, 76%);
-    --superLightGrey: hsl(208, 21%, 88%);
+    --green-base: hsl(${COLORS.green.base});
+    --green-super-light: hsl(${COLORS.green.superLight});
+    --green-light: hsl(${COLORS.green.light});
+    --green-dark: hsl(${COLORS.green.dark});
+    --green-super-dark: hsl(${COLORS.green.superDark});
 
-    --primary: var(--teal);
-    --darkPrimary: var(--darkTeal);
-    --superDarkPrimary: var(--superDarkTeal);
-    --lightPrimary: var(--lightTeal);
-    --superLightPrimary: var(--superLightTeal);
-    --secondary: var(--pink);
+    --orange-base: hsl(${COLORS.orange.base});
+    --orange-super-light: hsl(${COLORS.orange.superLight});
+    --orange-light: hsl(${COLORS.orange.light});
+    --orange-dark: hsl(${COLORS.orange.dark});
+    --orange-super-dark: hsl(${COLORS.orange.superDark});
+
+    --red-base: hsl(${COLORS.red.base});
+    --red-super-light: hsl(${COLORS.red.superLight});
+    --red-light: hsl(${COLORS.light});
+    --red-dark: hsl(${COLORS.red.dark});
+    --red-super-dark: hsl(${COLORS.red.superDark});
+
+    --white: hsl(${COLORS.white});
+    --black: hsl(${COLORS.black});
+
+    --gray-base: hsl(${COLORS.gray.base});
+    --gray-super-light: hsl(${COLORS.gray.superLight});
+    --gray-light: hsl(${COLORS.gray.light});
+    --gray-dark: hsl(${COLORS.gray.dark});
+    --gray-super-dark: hsl(${COLORS.gray.superDark});
+
+    /* SHADOW */
+    --xs-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+    --sm-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+    --base-shadow: 0 1px 3px 0 rgba(0,0,0,0.15),0 1px 2px 0 rgba(0,0,0,0.11);
+    --md-shadow: 0 4px 6px -1px rgba(0,0,0,0.15),0 2px 4px -1px rgba(0,0,0,0.11);
+    --lg-shadow: 0 10px 15px -3px rgba(0,0,0,0.15),0 4px 6px -2px rgba(0,0,0,0.1);
+    --xl-shadow: 0 20px 25px -5px rgba(0,0,0,0.15),0 10px 10px -5px rgba(0,0,0,0.09);
+    --xxl-shadow: 0 25px 50px -12px rgba(0,0,0,0.3);
+    --inner-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.11);
 
     /* TYPOGRAPHY */
-    --superBigText: 5rem;
-    --h1: 4.209rem;
-    --h2: 3.157rem;
-    --h3: 2.369rem;
-    --h4: 1.777rem;
-    --h5: 1.333rem;
-    --baseFontSize: 1rem;
-    --smallText: 0.75rem;
-    --bodyFont: "Rubik";
-    --monoFont: "Fira Mono";
-
-    /* ELEVATION */
-    --xsShadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
-    --smShadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-    --baseShadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
-    --mdShadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15), 0 2px 4px -1px rgba(0, 0, 0, 0.11);
-    --lgShadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
-    --xlShadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.09);
-    --xxlShadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
-    --innerShadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.11);
-    --navShadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.15), 0 -2px 4px -1px rgba(0, 0, 0, 0.11);
+    --system-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --body-font: 'Rubik';
+    --header-font: 'Rubik';
+    --fs-900: ${64 / 16}rem;
+    --fs-800: ${48 / 16}rem;
+    --fs-700: ${32 / 16}rem;
+    --fs-600: ${24 / 16}rem;
+    --fs-400: ${16 / 16}rem;
+    --fs-300: ${12 / 16}rem;
 
 
     --transition: all 250ms;
   }
 
-  *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
+  #___gatsby {
+    /* Create a stacking context, without a z-index */
+    /* Ensures all portal content (modals and tooltips) will */
+    /* float above the Gatsby app */
+    isolation: isolate;
   }
-
+  
+  
   html {
-    --size: 1.5rem;
-    @media screen and (min-width: 48rem) {
-      --size: 3rem;
+    --size: 24px;
+    @media ${QUERIES.tabletAndUp} {
+      --size: 32px;
     }
-
-    scroll-behavior: smooth;
-
+    
     /* Full page border */
-    --borderSize: calc(var(--size) / 2);
-    border: var(--borderSize) var(--superDarkGrey) solid;
+    --border-size: calc(var(--size) / 2);
+    border: var(--border-size) var(--gray-super-dark) solid;
+    
+    min-height: 100%;
+    position: relative;
 
-    /* Typography */
-    font-family: var(--bodyFont), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    &:after {
+      box-sizing: content-box;
+      display: block;
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: calc(var(--border-size) * -1);
+      left: calc(var(--border-size) * -1);
+      z-index: -3;
+      border: var(--border-size) var(--gray-super-dark) solid;
+      background: var(--white);
+    }
+  }
+  
+  body, #___gatsby, #gatsby-focus-wrapper {
+    min-height: calc(100vh - var(--size));
   }
 
   body {
-    min-height: calc(100vh - 3rem);
-    font-weight: 400;
-    line-height: 1.65;
-
-    /* Base styles */
+    --text-color: var(--gray-super-dark);
     --background-color: var(--white);
-    --text-color: var(--superDarkGrey);
+    --primary: var(--green-base);
+    --secondary: var(--red-base);
+    --max-body-width: calc(100vw - var(--size));
+    --max-content-width: 768px;
+    --content-padding: 16px;
+    --body-text-size: var(--fs-400);
 
+    max-width: var(--max-body-width);
+    background-color: var(--background-color);
+    font-family: var(--body-font), var(--system-font-stack);
+    font-size: var(--body-text-size);
     color: var(--text-color);
-    background: var(--background-color);
-    background-image: url(${zigzag});
-    background-attachment: fixed;
-
-    
-}
-
-/* TYPOGRAPHY */
-h1, h2, h3, h4, h5 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
-  line-height: 1.15;
-}
-
-h1 {
-  font-size: var(--h1);
-  margin: 0;
-}
-
-h2 {font-size: var(--h2);}
-
-h3 {font-size: var(--h3);}
-
-h4 {font-size: var(--h4);}
-
-h5 {font-size: var(--h5);}
-
-h6 {font-weight: normal;
-  @media screen and (min-width: 40rem) {
-    font-size: var(--baseFontSize);
   }
-}
 
-p {
-  padding-bottom: 1rem;
-  
-  
-  @media screen and (min-width: 40rem) {
-    padding-bottom: 2rem;
-    font-size: var(--h5);
+  a {
+    color: inherit;
+    text-decoration-color: var(--primary);
+    transition: var(--transition);
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        text-decoration-color: var(--secondary);
+      }
+    }
   }
-}
 
-small, .text_small {font-size: var(--smallText);}
-
-a {
-  color: var(--superDarkGrey);
-  text-decoration-color: var(--primary);
-  transition: var(--transition);
-  font-size: inherit;
-}
-
-a:hover {
-  text-decoration-color: var(--secondary);
-}
-
-
-/* Scrollbar Styles */
+  /* ========================================================= */
+  /* Scrollbar Styles */
+  /* ========================================================= */
   body::-webkit-scrollbar {
-    width: 0.75rem;
+    width: 16px;
   }
+
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--primary) var(--superDarkGrey);
+    scrollbar-color: var(--primary) var(--gray-super-dark);
   }
+
   body::-webkit-scrollbar-track {
-    background: var(--superDarkGrey);
+    background: var(--gray-super-dark);
   }
+
   body::-webkit-scrollbar-thumb {
     background-color: var(--primary);
     background-image: var(--primary);
-    border-radius: 6px;
-    border: 3px solid var(--superDarkGrey);
+    border-radius: 8px;
+    border: 3px solid var(--gray-super-dark);
   }
 
-  img {
-    max-width: 100%;
-    
-  }
-
-  .bold {
-    font-weight: bold;
-  }
-
-  .italic {
-    font-style: italic;
-  }
-
-  .primary {
-    color: var(--primary);
-  }
-
-  button, .btn {
-    padding: 1rem 2rem;
-    background: var(--primary);
-    font-weight: bold;
-    transition: var(--transition);
-    text-decoration-color: var(--superDarkGrey);
-
-    &:hover {
-      background: var(--secondary);
-    }
-  }
-
-  main {
-    max-width: 48rem;
-    margin: 0 auto;
-    padding: 2rem 2rem;
-  }
-
-  @media screen and (min-width: 55rem) {
-    main {
-      padding: 2rem 0;
-    }
-  }
 `;
 
 export default GlobalStyles;

@@ -1,117 +1,90 @@
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import SEO from '../components/SEO';
-import layeredPeaks from '../assets/images/layered-peaks-primary-large.svg';
+import PageHeading from '../components/PageHeading';
+import { QUERIES } from '../utils/constants';
+import HeadingDecoration from '../assets/images/page-heading-underline.svg';
 
-const HomePageWrapper = styled.div`
-  .intro {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-    padding-bottom: 1rem;
-  }
+const Index = () => (
+  <>
+    <SEO title="Home" />
+    <HomeWrapper>
+      <HomeHeading>
+        Hi, I'm <br />
+        <span>Will Luft!</span>
+      </HomeHeading>
+      <ImageWrapper>
+        <StaticImage
+          src="../assets/images/headshot.jpg"
+          alt="Headshot of Will Luft"
+          width="184"
+        />
+      </ImageWrapper>
+      <p>
+        By day I support the fulfillment system operations of{' '}
+        <a href="https://www.donorschoose.org/">DonorsChoose</a>.
+      </p>
+      <p>
+        By night I keep busy by{' '}
+        <Link to="/projects">working on web development projects</Link>, finding
+        crafts to keep my hands busy, and trying to stay in shape to play soccer
+        and volleyball.
+      </p>
 
-  h1 {
-    font-size: var(--h4);
-    /* padding-bottom: 1rem; */
+      <p>
+        You can <Link to="/about">read more about me</Link> or checkout{' '}
+        <Link to="/bookshelf">some of the books that I've read</Link>.
+      </p>
+    </HomeWrapper>
+  </>
+);
+export default Index;
 
-    span {
-      font-size: var(--h2);
-      /* margin-top: 1rem; */
-      position: relative;
-      z-index: 10;
-      display: inline-block;
+const HomeWrapper = styled.section`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
 
-      /* &::before {
-        --scale: 1.1;
-        content: '';
-        position: absolute;
-        width: 100%;
+  @media ${QUERIES.tabletAndUp} {
+    grid-template-columns: 60% 1fr;
 
-        background-image: url(${layeredPeaks});
-        bottom: 0;
-        left: 0;
-        transform: skew(24deg) rotate(var(--rotate)) scaleX(var(--scale));
-        transition: var(--transition);
-        z-index: -10;
-      } */
-    }
-  }
-
-  img {
-    border-radius: 50%;
-    justify-self: center;
-    border: 4px solid var(--primary);
-  }
-
-  @media screen and (min-width: 40rem) {
-    .intro {
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-    }
-  }
-
-  @media screen and (min-width: 53rem) {
-    h1 {
-      span {
-        font-size: var(--superBigText);
-
-        /* &::before {
-          height: calc(var(--superBigText) + 40px);
-        } */
-      }
+    p {
+      grid-column: 1/-1;
     }
   }
 `;
 
-const Index = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      headshot: file(relativePath: { eq: "headshot.jpg" }) {
-        childImageSharp {
-          resize(width: 600) {
-            src
-          }
-        }
-      }
+const HomeHeading = styled(PageHeading)`
+  font-size: var(--fs-800);
+  margin-bottom: 32px;
+
+  span {
+    font-size: calc(var(--fs-900) + 1rem);
+    display: inline-block;
+    position: relative;
+    line-height: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 32px;
+      background-image: url(${HeadingDecoration});
+      background-position: top center;
+      bottom: -32px;
+      z-index: -1;
     }
-  `);
+  }
+`;
 
-  return (
-    <>
-      <SEO title="Home" />
-      <HomePageWrapper>
-        <div className="intro">
-          <h1>
-            Hi, I'm &nbsp;
-            <br />
-            <span> Will Luft.</span>
-          </h1>
-          <img
-            src={data.headshot.childImageSharp.resize.src}
-            width="175"
-            alt="Will Luft"
-          />
-        </div>
-        <p>
-          By day I help support public schools and teachers, doing Fulfillment
-          System Operations for{' '}
-          <a href="https://www.donorschoose.org/">DonorsChoose</a>.
-        </p>
-        <p>
-          By night I keep busy by <Link to="/projects">building websites</Link>,
-          finding projects to keep my hands busy, and trying to stay in shape to
-          play soccer and volleyball.
-        </p>
+const ImageWrapper = styled.div`
+  display: grid;
+  place-items: center;
 
-        <p>
-          You can <Link to="/about">read more about me here,</Link> or checkout{' '}
-          <Link to="/bookshelf">what I've been reading</Link>.
-        </p>
-      </HomePageWrapper>
-    </>
-  );
-};
-
-export default Index;
+  div {
+    border-radius: 50%;
+    border: 8px solid var(--primary);
+  }
+`;

@@ -1,18 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-import 'normalize.css';
+import '@fontsource/rubik/variable.css';
+import '@fontsource/fira-mono';
 import GlobalStyles from '../styles/GlobalStyles';
-import Nav from './Nav';
+import Header from './Header';
 import Footer from './Footer';
-import battlestation from '../assets/images/battlestation.jpg';
 
 const LayoutWrapper = styled.div`
-  min-height: calc(100vh - 3rem);
+  min-height: calc(100vh - var(--size));
+  display: flex;
+  flex-direction: column;
 
-  /* Removing background image on home page */
-  /* &.welcome {
-    background: url(${battlestation}) no-repeat top center;
-  } */
+  main {
+    width: 100%;
+    max-width: var(--max-content-width);
+    margin: 32px auto 160px;
+    flex: 1;
+    padding: 0 24px;
+  }
 `;
 
 function Layout({ children, location }) {
@@ -23,7 +28,7 @@ function Layout({ children, location }) {
         id="layoutDiv"
         className={location.pathname === '/' ? 'welcome' : null}
       >
-        <Nav />
+        <Header />
         <main>{children}</main>
         <Footer />
       </LayoutWrapper>
