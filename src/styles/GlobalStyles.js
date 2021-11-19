@@ -197,6 +197,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: var(--body-font), var(--system-font-stack);
     font-size: var(--body-text-size);
     color: var(--text-color);
+    overflow-y: scroll; 
   }
 
   a {
