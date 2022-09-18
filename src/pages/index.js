@@ -23,14 +23,15 @@ const Index = () => (
         />
       </ImageWrapper>
       <p>
-        By day I support the fulfillment system operations of{' '}
-        <a href="https://www.donorschoose.org/">DonorsChoose</a>.
+        By day I work at{' '}
+        <a href="https://www.donorschoose.org/">DonorsChoose</a> on the
+        Information and Business Technology team.
       </p>
       <p>
         By night I keep busy by{' '}
-        <Link to="/projects">working on web development projects</Link>, finding
-        crafts to keep my hands busy, and trying to stay in shape to play soccer
-        and volleyball.
+        <Link to="/projects">working on web development projects</Link>, making
+        stuff out of leather, and trying to stay in shape to play soccer and
+        volleyball.
       </p>
 
       <p>
