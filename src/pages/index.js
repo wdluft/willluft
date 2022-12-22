@@ -23,6 +23,13 @@ const Index = () => (
         />
       </ImageWrapper>
       <p>
+        <a href="https://twitter.com/iamwilldl">Twitter</a> |{' '}
+        <a href="https://www.instagram.com/iamwilldl/">Instagram</a> |{' '}
+        <a href="https://www.instagram.com/willmadeleatherco/">
+          Will Made Leather Co.
+        </a>
+      </p>
+      <p>
         By day I work at{' '}
         <a href="https://www.donorschoose.org/">DonorsChoose</a> on the
         Information and Business Technology team.
