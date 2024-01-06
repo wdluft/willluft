@@ -13,7 +13,7 @@ const Index = () => (
     <HomeWrapper>
       <HomeHeading>
         Hi, I'm <br />
-        <span>Will Luft!</span>
+        <span>Will Luft</span>
       </HomeHeading>
       <ImageWrapper>
         <StaticImage
